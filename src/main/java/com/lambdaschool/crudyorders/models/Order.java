@@ -34,8 +34,8 @@ public class Order {
    public Order() {
    }
 
-   public Order(long ordnum, double ordamount, double advanceamount, Customer customer, String orderdescription, List<Payment> payments) {
-      this.ordnum = ordnum;
+   public Order(double ordamount, double advanceamount, String orderdescription, List<Payment> payments) {
+
       this.ordamount = ordamount;
       this.advanceamount = advanceamount;
       this.orderdescription = orderdescription;
