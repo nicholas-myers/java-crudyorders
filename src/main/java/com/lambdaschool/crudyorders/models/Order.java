@@ -34,12 +34,13 @@ public class Order {
    public Order() {
    }
 
-   public Order(double ordamount, double advanceamount, String orderdescription, List<Payment> payments) {
+   public Order(double ordamount, double advanceamount,Customer customer, String orderdescription) {
 
       this.ordamount = ordamount;
       this.advanceamount = advanceamount;
+      this.customer = customer;
       this.orderdescription = orderdescription;
-      this.payments = payments;
+
    }
 
    public long getOrdnum() {
@@ -66,6 +67,14 @@ public class Order {
       this.advanceamount = advanceamount;
    }
 
+   public Customer getCustomer() {
+      return customer;
+   }
+
+   public void setCustomer(Customer customer) {
+      this.customer = customer;
+   }
+
    public String getOrderdescription() {
       return orderdescription;
    }
@@ -80,6 +89,11 @@ public class Order {
 
    public void setPayments(List<Payment> payments) {
       this.payments = payments;
+   }
+
+   public void addPayments(Payment payment)
+   {
+      payments.add(payment);
    }
 
    @Override

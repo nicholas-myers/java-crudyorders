@@ -29,14 +29,12 @@ public class Agent {
    public Agent() {
    }
 
-   public Agent(long agentcode, String agentname, String workingarea, double commission, String phone, String country, List<Customer> customers) {
-      this.agentcode = agentcode;
+   public Agent(String agentname, String workingarea, double commission, String phone, String country) {
       this.agentname = agentname;
       this.workingarea = workingarea;
       this.commission = commission;
       this.phone = phone;
       this.country = country;
-      this.customers = customers;
    }
 
    public long getAgentcode() {

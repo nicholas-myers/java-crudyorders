@@ -78,11 +78,11 @@ public class CustomerServiceImp implements CustomerService
       newCustomer.setPhone(customer.getPhone());
       newCustomer.setAgent(customer.getAgent());
 
-      newCustomer.getOrders().clear();
-      for (Order o : customer.getOrders()) {
-         Order newOrder = new Order(o.getOrdamount(), o.getAdvanceamount(), o.getOrderdescription(), o.getPayments());
-         newCustomer.getOrders().add(newOrder);
-      }
+//      newCustomer.getOrders().clear();
+//      for (Order o : customer.getOrders()) {
+//         Order newOrder = new Order(o.getOrdamount(), o.getAdvanceamount(), o.getCustomer(), o.getOrderdescription(), o.getPayments());
+//         newCustomer.getOrders().add(newOrder);
+//      }
       return custrepos.save(newCustomer);
    }
 
